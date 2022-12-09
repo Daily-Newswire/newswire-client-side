@@ -38,7 +38,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link className='btn btn-outline bg-blue-400 text-gray-900'>Get Started</Link>
+                <Link className="bg-blue-400 text-gray-900 p-3 rounded-xl text-lg">Get Started</Link>
             </div>
         </div >
     );
