@@ -5,6 +5,7 @@ import Entertainment from '../../Pages/Entertainment/Entertainment';
 import Cultural from "../../Pages/Cultural/Cultural";
 import Sports from "../../Pages/Sports/Sports";
 import SubmitYourWritings from "../../Pages/SubmitYourWritings/SubmitYourWritings";
+import AllNews from "../../Pages/Home/AllNews/AllNews";
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../../Layout/Main");
 
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
             {
                 path: '/submityourwritings',
                 element: <SubmitYourWritings></SubmitYourWritings>
+            },
+            {
+                path:'/allnews',
+                element:<AllNews></AllNews>
             }
         ]
     }
