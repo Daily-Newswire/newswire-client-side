@@ -1,23 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../../assets/images/logoTwo.png';
 
 const Navbar = () => {
     const menuItems = <React.Fragment>
-        <li><Link>Home</Link></li>
-        <li tabIndex={0}>
-            <Link>
-                Categories
-                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-            </Link>
-            <ul className="p-2 shadow-2xl rounded-xl">
-                <li><Link>National</Link></li>
-                <li><Link>International</Link></li>
-                <li><Link>Cultural</Link></li>
-                <li><Link>Entertainment</Link></li>
-                <li><Link>Sports</Link></li>
-            </ul>
-        </li>
-        <li><Link>Submit Your Writtings</Link></li>
+        <li><Link className='font-semibold rounded-xl shadow-xl' to='/'>Home</Link></li>
+
+        <li><Link className='font-semibold ' to='/national'>National</Link></li>
+        <li><Link className='font-semibold ' to='/international'>International</Link></li>
+        <li><Link className='font-semibold ' to='/cultural'>Cultural</Link></li>
+        <li><Link className='font-semibold ' to='/entertainment'>Entertainment</Link></li>
+        <li><Link className='font-semibold ' to='/sports'>Sports</Link></li>
+
+        <li><Link className='font-semibold ' to='/submityourwritings'>Submit Your Writtings</Link></li>
     </React.Fragment>
     return (
         <div className="navbar bg-base-100">
@@ -30,7 +25,11 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+                <Link className="btn btn-ghost normal-case text-2xl">
+                    <figure>
+                        <img src={logo} className="w-[15%] lg:w-[23%] md:w-[20%] h" alt=''/>
+                    </figure>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
@@ -38,7 +37,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link className="bg-blue-400 text-gray-900 p-3 rounded-xl text-lg">Get Started</Link>
+                <Link className="bg-yellow-400 hover:bg-amber-600 text-gray-900 p-3 rounded-xl text-lg">Get Started</Link>
             </div>
         </div >
     );
